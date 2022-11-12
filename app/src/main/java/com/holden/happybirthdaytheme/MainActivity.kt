@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
             HappyBirthdayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    ImageDisplay("Text composable", "Nice work!","Image composable","Creates a composable that lays out and draws a given Painter class object.\n")
+                    ImageDisplay("Text composable", "Nice work!","Row composable","A layout composable that places its children in a horizontal sequence.\n")
                 }
             }
         }
@@ -44,7 +44,6 @@ fun TextDisplay(header1: String, body1: String){
     ) {
         Text(
             text = header1,
-            fontSize = 24.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -65,14 +64,13 @@ fun TextDisplay(header1: String, body1: String){
 fun TextDisplay2(header2: String, body2: String){
     Column(
         modifier = Modifier
-            .background(Color.Yellow)
+            .background(Color.Cyan)
             .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
             .fillMaxHeight()
             .wrapContentHeight(Alignment.CenterVertically)
     ) {
         Text(
             text = header2,
-            fontSize = 24.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -92,14 +90,13 @@ fun TextDisplay2(header2: String, body2: String){
 fun TextDisplay3(header1: String, body1: String){
     Column(
         modifier = Modifier
-            .background(Color.Cyan)
+            .background(Color.Yellow)
             .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
             .fillMaxHeight(0.5f)
             .wrapContentHeight(Alignment.CenterVertically)
     ) {
         Text(
             text = header1,
-            fontSize = 24.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -126,7 +123,6 @@ fun TextDisplay4(header2: String, body2: String){
     ) {
         Text(
             text = header2,
-            fontSize = 24.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
@@ -172,8 +168,8 @@ fun BirthdayCardPreview() {
                 .fillMaxWidth()
                 .fillMaxHeight()
         ) {
-            ImageDisplay("Text composable","Displays text and follows Material Design guidelines.","Image composable","Creates a composable that lays out and draws a given Painter class object.\n")
-            ImageDisplay2("Row composable","A layout composable that places its children in a horizontal sequence.","Column Composable","A layout composable that places its children in a vertical sequence.")
+            ImageDisplay("Text composable","Displays text and follows Material Design guidelines.","Row composable","A layout composable that places its children in a horizontal sequence.\n")
+            ImageDisplay2("Image composable","Creates a composable that lays out and draws a given Painter class object.","Column Composable","A layout composable that places its children in a vertical sequence.")
         }
        }
 }
