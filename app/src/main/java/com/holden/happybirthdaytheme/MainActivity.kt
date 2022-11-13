@@ -26,7 +26,8 @@ class MainActivity : ComponentActivity() {
             HappyBirthdayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    ImageDisplay("Text composable", "Nice work!","Row composable","A layout composable that places its children in a horizontal sequence.\n")
+                    ImageDisplay("Text composable", "Displays text and follows Material Design guidelines.","Row composable","A layout composable that places its children in a horizontal sequence.\n")
+                    ImageDisplay2("Image composable","Creates a composable that lays out and draws a given Painter class object.","Column Composable","A layout composable that places its children in a vertical sequence.")
                 }
             }
         }
